@@ -43,6 +43,16 @@ h1 {
   margin-bottom: 1rem;
 }
 
+h2 {
+  color: #0E0661;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
 .intro {
   font-weight: 100;
   margin-bottom: 2rem;
@@ -78,10 +88,34 @@ h1 {
   font-size: 1.1rem;
 }
 
+.input--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badges {
+  margin-bottom: 2rem;
+}
+
+.badges img {
+  width: 180px;
+  height: 50px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.confirm {
+  text-align: center;
+}
+
+.confirm__body {
+  max-width: 560px;
+  margin: 2rem auto;
 }
 
 @media(min-width: 1024px) {

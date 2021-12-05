@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/">
+        <img src="../contendo.svg" alt="">
+      </a>
+    </header>
+    <section class="confirm">
+      <h1>Get started using Contendo</h1>
+      <div class="confirm__body">
+        <h2>1. Download the app</h2>
+        <p>Contendo is mobile-only for now.  Visit your preferred platform to download the app now.</p>
+        <div class="badges">
+          <img src="../ios-badge.svg" alt="">
+          <img src="../play-badge.svg" alt="">
+        </div>
+        <h2>2. Check your email</h2>
+        <p>We just you sent a verification code the email you provided. Copy
+        this code and paste it when asked for it after logging into the app.</p>
+        <div class="input input--text">
+          <span id="email"></span>
+        </div>
+      </div>
+      </div>
+    </section>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const email = urlParams.get('email');
+      const emailInput = document.getElementById('email');
+      emailInput.append(email);
+    </script>
+  </div>
+</body>
+</html>

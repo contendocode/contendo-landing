@@ -12,7 +12,9 @@
 <body>
   <div class="container">
     <header>
-      <img src="contendo.svg" alt="">
+      <a href="/">
+        <img src="contendo.svg" alt="">
+      </a>
     </header>
     <section class="hero">
       <div class="hero__copy">
@@ -20,12 +22,20 @@
         <p class="intro">Take the hassle out of capturing and recording votes for the players in your team.
         Keep your team engaged with live data updated after every game.</p>
         <form action="">
-          <input type="email" class="input" placeholder="Enter your email address"/>
+          <input type="email" id="email" class="input" placeholder="Enter your email address"/>
           <button type="submit" class="btn btn--block">Join for free</button>
         </form>
       </div>
       <img src="bg.png" alt="" class="hero__bg">
     </section>
   </div>
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      window.location.href = `/confirm?email=${email}`;
+    });
+  </script>
 </body>
 </html>
